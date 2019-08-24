@@ -1,3 +1,5 @@
-const testMyFeelings = () => 'You are very happy'
+import '@babel/polyfill'
 
-export default testMyFeelings
+import { jit } from './ji'
+
+export default jit
