@@ -1,6 +1,6 @@
 {
   "name": "jilang",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ji Language — Symbols as Functions",
   "main": "dist/index.js",
   "scripts": {
