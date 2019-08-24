@@ -1,0 +1,33 @@
+{
+  "name": "ji",
+  "version": "1.0.0",
+  "description": "Ji Language — Symbols as Functions",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npx babel src --out-dir dist",
+    "start": "npx babel src --watch --out-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elis/ji.git"
+  },
+  "keywords": [
+    "ji",
+    "language",
+    "programming",
+    "emoji",
+    "macro"
+  ],
+  "author": "Eli Sklar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elis/ji/issues"
+  },
+  "homepage": "https://github.com/elis/ji#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5"
+  }
+}
