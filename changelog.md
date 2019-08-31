@@ -1,4 +1,4 @@
-# Changelpg
+# Changelog
 
 ## 0.3.0 - 2019-08-24
 

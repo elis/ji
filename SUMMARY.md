@@ -1,6 +1,5 @@
 # Table of contents
 
-* [Initial page](README.md)
-* [Ji](undefined.md)
-* [Changelpg](changelpg.md)
+* [Welcome to Ji](README.md)
+* [Changelog](changelog.md)
 
