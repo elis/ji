@@ -1,3 +1,9 @@
 {
-  "extends": "standard"
+  "extends": "standard",
+  "rules": {
+      "no-multiple-empty-lines": ["warn", { "max": 3, "maxEOF": 1 }],
+      "padded-blocks": [0],
+      "no-trailing-spaces": [0],
+      "no-new-func": [0]
+  }
 }

@@ -1,12 +1,13 @@
 {
-  "name": "jilang",
-  "version": "1.0.1",
+  "name": "@jilib/ji",
+  "version": "0.4.0",
   "description": "Ji Language — Symbols as Functions",
   "main": "dist/index.js",
   "scripts": {
     "build": "npx babel src --out-dir dist",
     "start": "npx babel src --watch --out-dir dist --source-maps inline",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "./bin/ji.js"
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,8 @@
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "standard": "^14.0.2"
+    "standard": "^14.0.2",
+    "yargs": "^14.0.0"
   },
   "standard": {
     "parser": "babel-eslint"
@@ -43,6 +45,10 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
     "lodash": "^4.17.15",
+    "pipe-args": "^1.3.0",
     "runes": "^0.4.3"
+  },
+  "bin": {
+    "ji": "./bin/ji.js"
   }
 }

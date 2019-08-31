@@ -1,5 +1,6 @@
 import '@babel/polyfill'
 
-import { jit } from './ji'
+import ji, { jit } from './ji'
 
-export default jit
+export { ji, jit }
+export default ji
