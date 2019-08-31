@@ -7,7 +7,7 @@ exports.handler = async function (argv) {
   const { filename, scope, input } = argv
 
   const scopePath = scope && path.join(process.cwd(), scope)
-  const filePath = path.join(process.cwd(), filename)
+  const filePath = filename && path.join(process.cwd(), filename)
 
   const _scope = (scopePath && require('fs').existsSync(scopePath))
     ? require(path.join(process.cwd(), scope))
