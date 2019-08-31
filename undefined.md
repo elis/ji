@@ -17,7 +17,6 @@ $ echo "Get started with Ji:
 
 $ npx jilc watch my.ji
 # Get started with...
-
 ```
 
 Install locally:
@@ -56,7 +55,7 @@ Use Ji inside your javascript code:
 $ npm install --save jilc
 ```
 
-```js
+```javascript
 const Ji = require('jilc')
 
 const input = `Testing my Ji skills
@@ -75,8 +74,12 @@ console.log(compiled.toString())
 ## Learn more
 
 Get started here: [https://observablehq.com/@elisk/ji-language](https://observablehq.com/@elisk/ji-language)
+
 ## Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
+
