@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.4.5 - 2019-08-31
+
+Ji is now an NPM module and can be executed from the command line 
+
+### Added
+
+* Moved code to Github
+* CLI support
+* Watch files from CLI
+* Scope as file
+
 ## 0.3.0 - 2019-08-24
 
 ### Fixed
