@@ -1,6 +1,6 @@
 {
   "name": "jilc",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Ji Language — Symbols as Functions",
   "main": "dist/index.js",
   "scripts": {
