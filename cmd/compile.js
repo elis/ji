@@ -3,32 +3,41 @@ exports.command = ['compile [filename] [scope]', '$0 [filename] [scope]']
 exports.describe = 'compile ji code'
 
 exports.handler = async function (argv) {
-  const fs = require('fs')
   const path = require('path')
   const { filename, scope, input } = argv
 
-  const compile = (str) => {
-    const _scope = {
-      r: (what) => require(what),
-      ...((scope && fs.existsSync(scope)) ? require(path.join(process.cwd(), scope)) : {})
-    }
+  const scopePath = scope && path.join(process.cwd(), scope)
+  const filePath = path.join(process.cwd(), filename)
 
-    return require('../dist').ji(str, _scope)
-  }
+  const _scope = (scopePath && require('fs').existsSync(scopePath))
+    ? require(path.join(process.cwd(), scope))
+    : {}
 
   if (filename) {
-    const data = await new Promise(resolve => fs.readFile(path.join(process.cwd(), filename), 'utf8', (err, d) => {
-      if (err) {
-        process.stderr.write(err.toString())
-      }
-      resolve(d)
-    }))
-    const compiled = await compile(data)
+    const data = await readFile(filePath)
+    const compiled = await compile(data, _scope)
     process.stdout.write(compiled.toString())
   } else if (input) {
-    const compiled = await compile(input)
+    const compiled = await compile(input, _scope)
     process.stdout.write(compiled.toString())
   } else {
     require('yargs').showHelp()
   }
 }
+
+const compile = exports.compile = (str, scope = {}) => {
+  const _scope = {
+    r: (what) => require(what),
+    ...(scope || {})
+  }
+
+  return require('../dist').ji(str, _scope)
+}
+
+const readFile = exports.readFile = async (filepath) => 
+  new Promise(resolve => require('fs').readFile(filepath, 'utf8', (err, d) => {
+    if (err) {
+      process.stderr.write(err.toString())
+    }
+    resolve(d)
+  }))

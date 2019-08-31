@@ -24,7 +24,6 @@ const jitranslate = (vocs, scope) => async (...newRest) => {
   return mded
 }
 
-
 const jitc = (vocas, scope = {}) => async (input, ...params) => {
   if (input && input.length) {
     // const len = input.length
