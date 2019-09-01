@@ -79,6 +79,10 @@ Get started here: [https://observablehq.com/@elisk/ji-language](https://observab
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+## Friends & Similar Projects
+
+- [Emojicode](https://www.emojicode.org/) - [github](https://github.com/emojicode/emojicode)
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
